@@ -6,7 +6,10 @@ Gem::Specification.new do |s|
   s.description = "Obtain weather alerts from NOAA. Look up information by zip code or state."
   s.authors     = ["Nicole Paz"]
   s.email       = 'me@nicolejpaz.com'
-  s.files       = ['lib/hola.rb']
+  s.files       = ['lib/connect.rb']
   s.homepage    = 'https://github.com/nicolejpaz/nws-alert'
   s.license     = 'MIT'
+
+  s.add_dependency("rspec")
+  s.add_dependency("httparty")
 end
