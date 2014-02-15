@@ -10,6 +10,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/nicolejpaz/nws-alert'
   s.license     = 'MIT'
 
-  s.add_dependency("rspec")
-  s.add_dependency("httparty")
+  s.add_dependency "httparty"
+  
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "webmock"
 end
