@@ -30,10 +30,8 @@ describe Nws::Alert, :vcr do
   its(:urgency)       { should_not be_empty }
   its(:severity)      { should_not be_empty }
   its(:certainty)     { should_not be_empty }
-  its(:effective)     { should_not be_empty }
-  its(:effective)     { should be_an_instance_of Time }
-  its(:expires)       { should_not be_empty }
-  its(:expires)       { should be_an_instance_of Time }
+  its(:effective)     { should be_an_instance_of DateTime }
+  its(:expires)       { should be_an_instance_of DateTime }
   its(:sender_name)   { should_not be_empty }
   its(:headline)      { should_not be_empty }
   its(:description)   { should_not be_empty }
