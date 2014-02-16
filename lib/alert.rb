@@ -17,31 +17,14 @@ module Nws
 
     def initialize(entry)
       @entry = entry
+
+      find_status_and_notes_on_event
+      find_severity_and_likelihood_of_alert
+      find_sender_and_area_information
+      get_text_of_alert
     end
 
-    def status
-      @entry['status']
-    end
-
-    def note
-      @entry['note']
-    end
-
-    def event
-      @entry['info']['event']
-    end
-
-    def urgency
-      @entry['info']['urgency']
-    end
-
-    def severity
-      @entry['info']['severity']
-    end
-
-    def certainty
-      @entry['info']['certainty']
-    end
+    private
 
     def effective
       parse_time(@entry['info']['effective'])
@@ -51,23 +34,27 @@ module Nws
       parse_time(@entry['info']['expires'])
     end
 
-    def sender_name
-      @entry['info']['senderName']
+    def find_status_and_notes_on_event
+      @status = @entry['status']
+      @note = @entry['note']
+      @event = @entry['info']['event']
     end
 
-    def headline
-      @entry['info']['headline']
+    def find_severity_and_likelihood_of_alert
+      @urgency = @entry['info']['urgency']
+      @severity = @entry['info']['severity']
+      @certainty = @entry['info']['certainty']
     end
 
-    def description
-      @entry['info']['description']
+    def find_sender_and_area_information
+      @sender_name = @entry['info']['senderName']
+      @affected_area = @entry['info']['area']['areaDesc']
     end
 
-    def affected_area
-      @entry['info']['area']['areaDesc']
+    def get_text_of_alert
+      @headline = @entry['info']['headline']
+      @description = @entry['info']['description']
     end
-
-    private
 
     def parse_time(raw_datetime)
       DateTime.parse(raw_datetime)
