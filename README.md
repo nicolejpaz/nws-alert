@@ -18,7 +18,7 @@ A gem to access the NOAA alerts service.
   nws.alerts.first.expires #=> #<DateTime: 2014-02-16T05:00:00-05:00 ((2456705j,36000s,0n),-18000s,2299161j)>
 ```
 
-### Full Alert Methods
+### Alert Methods
 
 `status`: Status of the alert
 
