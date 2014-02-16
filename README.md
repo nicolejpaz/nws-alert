@@ -1,6 +1,6 @@
 # NWS Alert
 
-A gem to access the NOAA alerts service.
+A gem to access the NOAA alerts service. It can search via state abbreviation, zone code, county code, or zip code.
 
 ## Usage
 
