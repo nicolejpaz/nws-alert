@@ -55,12 +55,9 @@ module Nws
     end
 
     def get_alerts_at_location(entries)
-      # entries.each do |entry|
-        # item = HTTParty.get(entry[1], format: :xml)['alert']
-        item = HTTParty.get(entries['id'], format: :xml)['alert']
-        alert = Alert.new(item) unless item.nil?
-        @alerts << alert
-      # end
+      item = HTTParty.get(entries['id'], format: :xml)['alert']
+      alert = Alert.new(item) unless item.nil?
+      @alerts << alert
     end
 
     def no_alerts_available
