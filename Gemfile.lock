@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     nws-alert (0.0.0)
-      httparty
+      httparty (~> 0.13)
 
 GEM
   remote: https://rubygems.org/
@@ -35,6 +35,6 @@ PLATFORMS
 
 DEPENDENCIES
   nws-alert!
-  rspec
-  vcr
-  webmock
+  rspec (~> 2.14)
+  vcr (~> 2.8)
+  webmock (~> 1.17)
