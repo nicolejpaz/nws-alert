@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'nws-alert'
-  s.version     = '0.0.0'
+  s.version     = '0.0.1'
   s.date        = '2010-04-28'
   s.summary     = "Obtain NOAA weather alerts."
   s.description = "Obtain weather alerts from NOAA. Look up information by zip code or state."
