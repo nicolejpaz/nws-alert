@@ -2,6 +2,8 @@
 
 A gem to access the NOAA alerts service. It can search via state abbreviation, zone code, county code, or zip code.
 
+It gathers information from two NOAA APIs and scrapes information from another so that a user can provide multiple sources of information to find what they need. 
+
 ## Usage
 
 ``` ruby
@@ -45,5 +47,11 @@ A gem to access the NOAA alerts service. It can search via state abbreviation, z
 `affected_area`: Names all of the areas affected by the alert.
 
 ## License
+
+### Information from the Gem
+
+Public domain. (See the National Service website for more details on how to use their information.)
+
+### Code in the Gem
 
 MIT
